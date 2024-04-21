@@ -1,0 +1,26 @@
+$primary-color: teal; // it's a global
+
+/*It wouldn't work*/
+// .box {
+//     height: 100px;
+//     width: 100px;
+//     background-color: $sec-color;
+// }
+
+.main {
+    padding: 20px;
+    background-color: $primary-color; //it's a local scope
+    $sec-color: orange !global; //Now it's global
+}
+
+.parag-text {
+    $primary-color: white;
+    color: $primary-color;
+
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: $sec-color;
+}

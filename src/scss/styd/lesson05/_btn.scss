@@ -1,0 +1,10 @@
+@use "btn-schema" as vars with (
+    $color: yellow,
+    $bg-color: hotpink 
+);
+
+.small-btn {
+    font-size: vars.$font-size;
+    color: vars.$color;
+    background-color: vars.$bg-color;
+}
