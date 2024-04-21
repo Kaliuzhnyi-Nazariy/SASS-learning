@@ -1,0 +1,33 @@
+.link {
+    background: {
+        color: aqua;
+                position: center;
+
+        repeat: no-repeat;
+    }
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        padding: 8px;
+        // background-color: #fff;
+
+
+    // color: orange;
+
+    &:hover, &:focus {
+        font-size: 50px;
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.box {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+
+    .link:hover & {
+        width: 36px;
+        height: 36px;
+    }
+}
