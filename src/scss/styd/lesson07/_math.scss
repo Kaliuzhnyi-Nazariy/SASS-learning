@@ -1,0 +1,37 @@
+.box {
+    // width: 600px + 2; // it won't work
+    width: 600px + 20px; // it works because px + px
+    // width: 600px *2%; // it call an error because px * %
+    width: calc(600px + 50%); // it works because calc
+}
+
+/* multiplying and devide*/
+
+$value: 600px;
+
+.box{
+    width: 600px * 5; 
+    width: $value * 4;
+    width: 60 * 4 + 20px; // it return px because + 20px if I delete it the result will be 240 = error
+
+    width: $value / 5; //it work because of $value
+    // width: $value / 5px; //it will return 120 = error
+    // width: 600px / 5; // return 600px/5
+    width: (600px / 4); // return 150px
+    width: 600px / 4px - 10px; //it return 140px thanks "- 10px"
+}
+
+/* INTERPOLATION */
+
+$name: "boxer";
+$margin: 100px;
+
+.box{
+    margin: $margin * 2;
+    margin: calc($margin * 2);
+    margin: calc(#{$margin} * 2);
+}
+
+.#{$name} {
+    margin: $margin;
+}
