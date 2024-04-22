@@ -1,0 +1,135 @@
+// @mixin frame-size($width, $height: $width ) {
+//     width: $width;
+//     height: $height;
+// }
+
+// %size {
+//     height: 50px;
+//     width: 50px;
+// }
+
+// .avatar {
+//     // @include frame_size(150px); //will also work.
+//     @include frame-size(150px);
+
+//     display: block;
+//     border-radius: 50%;
+//     background-color: hotpink;
+// }
+
+// .icon {
+//     @extend %size;
+
+//     background-color: firebrick;
+// }
+
+// Arguments 
+
+// @mixin position ($position-type, $position-x, $position-y, $offset-x, $offset-y) {
+//     position: $position-type;
+//     top: $position-y;
+//     left: $position-x;
+//     transform: translate($offset-x, $offset-y);
+// }
+
+// .position {
+//     @include position(absolute, 50%, 50%, -50%, -50%);
+//     @include frame-size(150px);
+
+//     background-color: black;
+// }
+
+/* OPTIONAL ARGUMENTS */
+
+// @mixin position (
+//  $layer-index, //obvious argument
+//  $display, // it's correct place for obvious argument, here it's very important
+//  $position-type: absolute,
+//  $position-x : 50%,
+//  $position-y: $position-x,
+//  $offset-x:  $position-x,
+//  $offset-y:  $position-x
+//  )
+//   {
+//     position: $position-type;
+//     top: $position-y;
+//     left: $position-x;
+//     transform: translate(($offset-x * -1), ($offset-y * -1));
+//     z-index: $layer-index;
+//     display: $display
+// }
+
+// .position {
+//     // @include position(100, flex );
+//     @include position($position-x: 12%, $layer-index: 100, $offset-y: 44%, $display: flex ); // I can call any arg but I need call it by name
+//     // @include frame-size(150px);
+
+//     // background-color: navajowhite;
+// }
+
+// %btn {
+//   font-family: Montserrat;
+//   font-size: 14px;
+//   font-weight: 500;
+//   line-height: 20px; /* 142.857% */
+//   letter-spacing: 0.5px;
+//   color: #fafafb;
+
+//   background-color: #f07f2e;
+//   border: none;
+//   cursor: pointer;
+//   transition: 300ms;
+
+//   &:hover,
+//   &:focus {
+//     background-color: #f15c27;
+//     box-shadow: 0px 4px 10px 0px rgba(240, 127, 46, 0.25);
+//   }
+// }
+
+// @mixin btn-size($args...) {
+//     @for $i from 1 through length($args) {
+//         #{nth($args, $i)} {
+//             $factor: ($i * 4 - 4);
+
+//             @extend %btn;
+
+//             padding: (4px + $factor) (8px + $factor);
+//             border-radius: 8px + $factor;
+//         }
+//     }
+// }
+
+// @include btn-size(".btn-sm", ".btn-md", ".btn-lg", ".btn-xl", ".btn-xxl")
+
+// @use "sass:meta";
+
+// @mixin btn-type($types...) {
+//     @each $name, $color in meta.keywords($types){
+//         .btn-#{$name} {
+
+//             background-color: $color;
+//             color: black;
+//             border: 2px solid $color
+//         }
+//     };  
+// }
+
+// @include btn-type($success: lightgreen, $error: tomato, $info: lightblue)
+
+@mixin hover($state) {
+    &:not([#{$state}]):hover {
+        @content
+    }
+}
+ 
+.button {
+    background-color: #fff;
+    border: 2px solid darkcyan;
+
+    @include hover ($state: disabled) {
+        color: white;
+        background-color: darkcyan;
+    }
+
+}
