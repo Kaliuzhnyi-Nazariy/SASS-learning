@@ -1,0 +1,46 @@
+@use "sass:list";
+
+//list.nth() - to call an exact value
+
+$numbers: 8, 10, 14, 16, 20;
+
+// @debug list.nth($numbers, 2);
+
+// list.length - to find out a length of list
+
+$colors: blue, white, red;
+
+// @debug list.length($colors);
+
+// using @each
+
+$sizes: 40px, 48px, 56px, 64px;
+
+@each $size in $sizes {
+  .box-#{$size} {
+    height: $size;
+    width: $size;
+    padding: calc($size / 4);
+    margin: calc($size / 4);
+    background-color: purple;
+  }
+}
+
+// lists with @for
+
+$btn-types: ".btn-sm", ".btn-md", ".btn-lg", ".btn-xl";
+
+@mixin btn-size($types) {
+  @for $i from 1 through list.length($btn-types) {
+    #{list.nth($types, $i)} {
+      $factor: ($i * 5 - 5);
+
+      padding: (5px + $factor) (10px + $factor);
+      border-radius: (10px + $factor);
+      background-color: orange;
+      color: white;
+    }
+  }
+}
+
+@include btn-size($btn-types);

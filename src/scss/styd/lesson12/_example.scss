@@ -1,0 +1,16 @@
+@use "mixins" as m;
+@use "functions" as f;
+
+.text {
+  // $fs, $fw: null, $lh: null, $ls: null, $align: null)
+  @include m.fonts(24px, 400, 24, 4);
+}
+
+.container {
+  background-color: teal;
+  color: aliceblue;
+  margin: 24px;
+  padding: 20px;
+  width: f.rem(1000px);
+  height: f.rem(400);
+}
