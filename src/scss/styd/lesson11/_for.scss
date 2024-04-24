@@ -1,0 +1,21 @@
+/* @FOR */
+
+// @for at-rule with calculation
+$base-value: 400;
+
+// is more prefered
+@for $i from 0 through 3 {
+  // @debug $i; //for checking what is $i
+
+  .fw-#{$base-value+($i * 100)} {
+    font-weight: $base-value + ($i * 100);
+  }
+}
+
+// the differnce between through and to
+
+@for $i from 0 to 3 {
+  // @debug "using to: #{$i}";
+}
+
+// the difference is that "through" include include the higest limit while "to" - nope!

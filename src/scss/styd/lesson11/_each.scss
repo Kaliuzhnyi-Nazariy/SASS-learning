@@ -1,0 +1,24 @@
+/* @EACH */
+
+//@each at-rule with list
+$sizes: 8, 16, 20;
+
+@each $size in $sizes {
+  .p-#{$size} {
+    padding: #{$size}px;
+  }
+}
+
+//@each at-rule with map
+$spacerous: (
+  "sm": 16,
+  "md": 24,
+  "lg": 32,
+  "xl": 40,
+);
+
+@each $key, $value in $spacerous {
+  .margin-#{$key} {
+    margin: #{$value}px;
+  }
+}
