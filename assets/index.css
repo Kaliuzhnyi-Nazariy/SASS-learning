@@ -1,65 +1,59 @@
-.avatar-block {
-  height: 100px;
-  width: 100px;
-  background-color: turquoise;
+.box-40px {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  margin: 10px;
+  background-color: purple;
 }
 
-.avatar-circle {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: tomato;
+.box-48px {
+  height: 48px;
+  width: 48px;
+  padding: 12px;
+  margin: 12px;
+  background-color: purple;
 }
 
-.title {
-  font-size: 24px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.0208333333 em;
-  text-align: center;
+.box-56px {
+  height: 56px;
+  width: 56px;
+  padding: 14px;
+  margin: 14px;
+  background-color: purple;
 }
 
-/* @EACH */
-.p-8 {
-  padding: 8px;
-}
-
-.p-16 {
+.box-64px {
+  height: 64px;
+  width: 64px;
   padding: 16px;
-}
-
-.p-20 {
-  padding: 20px;
-}
-
-.margin-sm {
   margin: 16px;
+  background-color: purple;
 }
 
-.margin-md {
-  margin: 24px;
+.btn-sm {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
 }
 
-.margin-lg {
-  margin: 32px;
+.btn-md {
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: orange;
+  color: white;
 }
 
-.margin-xl {
-  margin: 40px;
+.btn-lg {
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: orange;
+  color: white;
 }
 
-/* @FOR */
-.fw-400 {
-  font-weight: 400;
-}
-
-.fw-500 {
-  font-weight: 500;
-}
-
-.fw-600 {
-  font-weight: 600;
-}
-
-.fw-700 {
-  font-weight: 700;
+.btn-xl {
+  padding: 20px 25px;
+  border-radius: 25px;
+  background-color: orange;
+  color: white;
 }
