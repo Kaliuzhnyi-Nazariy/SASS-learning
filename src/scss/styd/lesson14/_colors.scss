@@ -1,0 +1,24 @@
+@use "sass:map";
+
+$colors: (
+  "primary": #8e3329,
+  "accent": #d98328,
+  "secondary": #5a1321,
+  "foreground": #191919,
+  "background": #e9e9e9,
+);
+
+body {
+  background-color: map.get($colors, "background");
+}
+
+@function get-color($key) {
+  @return map.get($colors, $key);
+}
+
+.wrapper {
+  background-color: get-color(secondary);
+  width: 100%;
+  height: 1100px;
+  margin: 72px;
+}

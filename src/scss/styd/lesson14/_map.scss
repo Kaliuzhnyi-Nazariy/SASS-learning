@@ -1,0 +1,11 @@
+@use "colors" as c;
+
+.button {
+  background-color: c.get-color(accent);
+  color: c.get-color(foreground);
+
+  &:hover {
+    background-color: c.get-color(foreground);
+    color: c.get-color(accent);
+  }
+}

@@ -1,0 +1,25 @@
+$types: (
+  "primary": #f07f2e,
+  "success": #82c43c,
+  "danger": #fc5a5a,
+  "warning": #a461d8,
+  "info": #4e75ff,
+);
+
+@each $key, $value in $types {
+  .msg-#{$key} {
+    background-color: $value;
+
+    width: 360px;
+    height: 40px;
+    border-radius: 16px;
+    padding: 24px;
+    color: aliceblue;
+    font-style: bold;
+    font-weight: normal;
+    font-size: 56px;
+    display: flex;
+    align-items: center;
+    margin: 16px;
+  }
+}
