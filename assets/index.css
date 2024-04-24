@@ -1,0 +1,65 @@
+.avatar-block {
+  height: 100px;
+  width: 100px;
+  background-color: turquoise;
+}
+
+.avatar-circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: tomato;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.0208333333 em;
+  text-align: center;
+}
+
+/* @EACH */
+.p-8 {
+  padding: 8px;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.margin-sm {
+  margin: 16px;
+}
+
+.margin-md {
+  margin: 24px;
+}
+
+.margin-lg {
+  margin: 32px;
+}
+
+.margin-xl {
+  margin: 40px;
+}
+
+/* @FOR */
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
